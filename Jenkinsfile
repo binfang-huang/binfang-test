@@ -27,7 +27,7 @@ pipeline {
 
         stage('Third Stage') {
             steps {
-                timeout(5) {
+                timeout(1) {
                      input 'Continue Third Stage?'
                 }
                 echo '------------------------third stage-------------------------'
