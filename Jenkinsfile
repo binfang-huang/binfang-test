@@ -14,17 +14,22 @@ pipeline {
         stage('First stage') {
             steps {
                 echo '-------------------------first stagwe-------------------------'
-
             }
         }
 
         stage('Second Stage') {
             steps {
                 echo '------------------------second stage-------------------------'
-
             }
         }
 
-
+        stage('Third Stage') {
+            steps {
+                timeout(5) {
+                     input 'Continue Third Stage?'
+                }
+                echo '------------------------third stage-------------------------'
+            }
+        }
    }
 }
